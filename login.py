@@ -26,11 +26,21 @@ class MainWindow(qtw.QWidget):
 		my_button = qtw.QPushButton("Login",
 			clicked = lambda: press_it())
 		self.layout().addWidget(my_button)
+		
+		my_button = qtw.QPushButton("Register",
+			clicked = lambda: press_it2())
+		self.layout().addWidget(my_button)
 
 		# Show the app
 		self.show()
 
 		def press_it():
+			# Add name to label
+			my_label.setText(f'Hello {my_entry.text()}!')
+			# Clear the entry box
+			my_entry.setText("")
+			
+		def press_it2():
 			# Add name to label
 			my_label.setText(f'Hello {my_entry.text()}!')
 			# Clear the entry box
